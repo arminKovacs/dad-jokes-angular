@@ -1,4 +1,8 @@
 .example-card {
     max-width: 400px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5%;
+    padding: 20px;
   }
   
