@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RequestService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getJoke() {
+    return this.http.get('https://icanhazdadjoke.com/', {
+      headers: { Accept: 'application/json' },
+    });
+  }
 }
