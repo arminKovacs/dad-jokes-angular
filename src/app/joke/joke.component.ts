@@ -12,9 +12,8 @@ export class JokeComponent implements OnInit {
   constructor(private requestedJoke: RequestService) {}
 
   ngOnInit(): void {
-    this.requestedJoke.getJoke().subscribe((data) => {
-      this.joke = data;
-      console.log(data);
+    this.requestedJoke.getJoke().subscribe((data: any) => {
+      this.joke = data.joke;
     });
   }
 }

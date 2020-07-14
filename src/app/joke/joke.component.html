@@ -3,13 +3,11 @@
   <img mat-card-image src="../../assets/Dad-jokes.jpg" alt="Dad joke logo" />
   <mat-card-content align="center">
     <h2>
-      The Shiba Inu is the smallest of the six original and distinct spitz
-      breeds of dog from Japan. A small, agile dog that copes very well with
-      mountainous terrain, the Shiba Inu was originally bred for hunting.
+      {{ joke }}
     </h2>
   </mat-card-content>
   <mat-divider></mat-divider>
   <mat-card-actions align="center">
-    <button mat-button>GIVE ME ANOTHER!</button>
+    <button mat-button (click)='ngOnInit()'>GIVE ME ANOTHER!</button>
   </mat-card-actions>
 </mat-card>
